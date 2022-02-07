@@ -72,16 +72,6 @@ body {
     100% {-webkit-transform: translateY(0.4em); opacity: 0.8;}
 }
 
-@media (max-width: 425px) {
-    .hero {
-        height: 60vh;
-    }
-
-    .hero h2 {
-        font-size: 2.5rem;
-    }
-}
-
 .about {
     grid-area: about;
     display: grid;
@@ -117,7 +107,7 @@ body {
 
 .about .item .btn-know-more {
     font-size: 1.6rem;
-    align-self: center;
+    align-self: flex-start;
 }
 
 .about .item .btn-know-more:hover {
@@ -133,17 +123,6 @@ body {
     background: url('../images/sky.jpg') no-repeat center center;
     background-size: cover;
 
-}
-
-@media (max-width: 425px) {
-    .about {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
-    }
-
-    .about .item {
-        text-align: center;
-    }
 }
 
 .services {
@@ -183,11 +162,6 @@ body {
     background-color: #ffb6c1;
 }
 
-@media (max-width: 425px) {
-    .services {
-        grid-template-columns: 1fr;
-    }
-}
 
 .projects {
     grid-area: projects;
@@ -202,18 +176,6 @@ body {
 .projects a:hover {
     opacity: 0.8;
     transition: 0.3s;
-}
-
-@media (max-width: 768px) {
-    .projects {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 425px) {
-    .projects {
-        grid-template-columns: 1fr;
-    }
 }
 
 .footer {
@@ -268,4 +230,41 @@ body {
 .footer nav ul li a:hover,
 .footer .social a:hover {
     transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 425px) {
+    .hero {
+        height: 60vh;
+    }
+    
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+    
+    .about .item {
+        text-align: center;
+    }
+    
+    .about .item .btn-know-more {
+        align-self: center;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
 }
